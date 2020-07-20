@@ -15,7 +15,7 @@ import TimerCounter from "../components/TimeCounter";
 import randomPrimeGenerator from "../utils/randomPrime";
 
 function GamePage(props) {
-  const [timeLimit] = useState(30);
+  const [timeLimit] = useState(32);
   const [isTimeUp, setIsTimeUp] = useState(false);
   const [randomPrime, setRandomPrime] = useState(randomPrimeGenerator());
   const [displayNumber, setDisplayNumber] = useState(randomPrime);
