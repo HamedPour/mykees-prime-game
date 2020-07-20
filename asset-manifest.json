@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/mykees-prime-game/static/css/main.3ff6c8c9.chunk.css",
+    "main.js": "/mykees-prime-game/static/js/main.d6add8a5.chunk.js",
+    "main.js.map": "/mykees-prime-game/static/js/main.d6add8a5.chunk.js.map",
+    "runtime-main.js": "/mykees-prime-game/static/js/runtime-main.2402494a.js",
+    "runtime-main.js.map": "/mykees-prime-game/static/js/runtime-main.2402494a.js.map",
+    "static/js/2.a18c83a0.chunk.js": "/mykees-prime-game/static/js/2.a18c83a0.chunk.js",
+    "static/js/2.a18c83a0.chunk.js.map": "/mykees-prime-game/static/js/2.a18c83a0.chunk.js.map",
+    "index.html": "/mykees-prime-game/index.html",
+    "precache-manifest.9e3b8b2a1d84468312a7197157ef013f.js": "/mykees-prime-game/precache-manifest.9e3b8b2a1d84468312a7197157ef013f.js",
+    "service-worker.js": "/mykees-prime-game/service-worker.js",
+    "static/css/main.3ff6c8c9.chunk.css.map": "/mykees-prime-game/static/css/main.3ff6c8c9.chunk.css.map",
+    "static/js/2.a18c83a0.chunk.js.LICENSE.txt": "/mykees-prime-game/static/js/2.a18c83a0.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2402494a.js",
+    "static/js/2.a18c83a0.chunk.js",
+    "static/css/main.3ff6c8c9.chunk.css",
+    "static/js/main.d6add8a5.chunk.js"
+  ]
+}
