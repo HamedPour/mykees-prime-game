@@ -12,7 +12,7 @@ export default styled.div`
     transition: box-shadow 0.3s ease-in-out;
 
     :hover {
-      box-shadow: 0px 0px 15px rgb(0, 1, 0.5);
+      box-shadow: 0px 0px 5px rgb(250, 250, 250);
     }
   }
 `;
