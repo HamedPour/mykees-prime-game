@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/mykees-prime-game/precache-manifest.a0048e2a84624953b914dee9180f3bec.js"
+  "/mykees-prime-game/precache-manifest.f7135d721337764073deba619b63c7a5.js"
 );
 
 self.addEventListener('message', (event) => {
