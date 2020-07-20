@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "0a3945d5be9d14d18445509873dfc91d",
+    "revision": "27735513d816bc812e2705563da10097",
     "url": "/mykees-prime-game/index.html"
   },
   {
-    "revision": "929395dc7128d82bc715",
+    "revision": "0248da308a7d50e6614e",
     "url": "/mykees-prime-game/static/css/main.3ff6c8c9.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/mykees-prime-game/static/js/2.a18c83a0.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "929395dc7128d82bc715",
-    "url": "/mykees-prime-game/static/js/main.d6add8a5.chunk.js"
+    "revision": "0248da308a7d50e6614e",
+    "url": "/mykees-prime-game/static/js/main.2fb3e4b2.chunk.js"
   },
   {
     "revision": "6f6e956f50ea053c2d26",
