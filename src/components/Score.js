@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect } from "react";
 
 // styled component
 import ScoreStyle from "../styledComponents/GamePage/Score";
 
-export default function Score() {
-  const [score] = useState(0);
-  return <ScoreStyle>Score: {score}</ScoreStyle>;
+export default function Score(props) {
+  useEffect(() => {}, [props.score]);
+  return <ScoreStyle>Score: {props.score}</ScoreStyle>;
 }

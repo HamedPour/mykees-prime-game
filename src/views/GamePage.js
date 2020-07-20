@@ -11,31 +11,76 @@ import NoButton from "../styledComponents/GamePage/NoButton";
 import Score from "../components/Score";
 import TimerCounter from "../components/TimeCounter";
 
+// utils
+import randomPrimeGenerator from "../utils/randomPrime";
+
 function GamePage(props) {
-  const [currentNumber] = useState(13);
-  const [timeLimit] = useState(3);
+  const [timeLimit] = useState(30);
   const [isTimeUp, setIsTimeUp] = useState(false);
+  const [randomPrime, setRandomPrime] = useState(randomPrimeGenerator());
+  const [displayNumber, setDisplayNumber] = useState(0);
+  const [isPrime, setIsPrime] = useState(false);
+  const [score, setScore] = useState(0);
 
   function timeIsUp() {
     setIsTimeUp(true);
   }
 
-  useEffect(() => {
-    if (isTimeUp) {
-      //props.history.push("/game-over");
+  function checkYesClick() {
+    if (!isPrime) {
+      // GameOver
+      gameOver(`${randomPrime + 1} is Not prime!`);
     }
-  }, [isTimeUp, props]);
+    setScore(score + 1);
+    localStorage.setItem("score", score);
+    setRandomPrime(randomPrimeGenerator());
+  }
+
+  function checkNoClick() {
+    if (isPrime) {
+      // GAME OVER!
+      gameOver(`${randomPrime} Is prime!`);
+    }
+    setScore(score + 1);
+    localStorage.setItem("score", score);
+    setRandomPrime(randomPrimeGenerator());
+  }
+  function questionNumberGenerator() {
+    let trick = Math.floor(Math.random() * 2);
+    if (trick) {
+      setDisplayNumber(randomPrime + 1);
+      setIsPrime(false);
+    } else {
+      setDisplayNumber(randomPrime);
+      setIsPrime(true);
+    }
+  }
+
+  function gameOver(aReason) {
+    localStorage.setItem("score", score);
+    localStorage.setItem("gameOverReason", aReason);
+    props.history.push("/game-over");
+  }
+
+  useEffect(() => {
+    // update display number
+    setDisplayNumber(randomPrime);
+    if (isTimeUp) {
+      gameOver("Time ran out!");
+    }
+    questionNumberGenerator();
+  });
 
   return (
     <GamePageContainer>
-      <Score />
+      <Score score={score} />
       <TimerCounter timeIsUp={timeIsUp} timeLimit={timeLimit} />
       <Question>
-        is <b>{currentNumber}</b> prime?
+        is <b>{displayNumber}</b> prime?
       </Question>
       <ButtonContainer>
-        <YesButton>Yes</YesButton>
-        <NoButton>No</NoButton>
+        <YesButton onClick={checkYesClick}>Yes</YesButton>
+        <NoButton onClick={checkNoClick}>No</NoButton>
       </ButtonContainer>
     </GamePageContainer>
   );

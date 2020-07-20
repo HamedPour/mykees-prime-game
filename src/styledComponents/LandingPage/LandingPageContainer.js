@@ -2,7 +2,8 @@ import styled from "styled-components";
 
 export default styled.div`
   height: 100vh;
-  background-color: rgba(204, 255, 153, 0.5);
+  background-color: #000;
+  color: #fff;
   display: flex;
   flex-direction: column;
   align-items: center;
