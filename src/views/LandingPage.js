@@ -26,7 +26,7 @@ function LandingPage() {
       </WelcomeTitle>
       <VerticalSpacer />
       <StartButton>
-        <NavLink to="/game">Start Game</NavLink>
+        <NavLink to="/mykees-prime-game/game">Start Game</NavLink>
       </StartButton>
     </LandingPageContainer>
   );

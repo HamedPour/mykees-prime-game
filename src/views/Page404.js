@@ -28,7 +28,7 @@ function Page404() {
       </div>
       <br />
       <div>
-        <a style={linkStyle} href="/">
+        <a style={linkStyle} href="/mykees-prime-game/">
           Click here to get to safety
         </a>
       </div>

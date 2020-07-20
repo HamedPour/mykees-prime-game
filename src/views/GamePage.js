@@ -18,7 +18,7 @@ function GamePage(props) {
   const [timeLimit] = useState(30);
   const [isTimeUp, setIsTimeUp] = useState(false);
   const [randomPrime, setRandomPrime] = useState(randomPrimeGenerator());
-  const [displayNumber, setDisplayNumber] = useState(0);
+  const [displayNumber, setDisplayNumber] = useState(randomPrime);
   const [isPrime, setIsPrime] = useState(false);
   const [score, setScore] = useState(0);
 
@@ -29,7 +29,7 @@ function GamePage(props) {
   function checkYesClick() {
     if (!isPrime) {
       // GameOver
-      gameOver(`${randomPrime + 1} is Not prime!`);
+      gameOver(`${randomPrime + 1} is not prime!`);
     }
     setScore(score + 1);
     localStorage.setItem("score", score);
@@ -39,7 +39,7 @@ function GamePage(props) {
   function checkNoClick() {
     if (isPrime) {
       // GAME OVER!
-      gameOver(`${randomPrime} Is prime!`);
+      gameOver(`${randomPrime} is prime!`);
     }
     setScore(score + 1);
     localStorage.setItem("score", score);
@@ -59,12 +59,11 @@ function GamePage(props) {
   function gameOver(aReason) {
     localStorage.setItem("score", score);
     localStorage.setItem("gameOverReason", aReason);
-    props.history.push("/game-over");
+    props.history.push("/mykees-prime-game/game-over");
   }
 
   useEffect(() => {
     // update display number
-    setDisplayNumber(randomPrime);
     if (isTimeUp) {
       gameOver("Time ran out!");
     }

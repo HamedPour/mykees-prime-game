@@ -6,19 +6,19 @@ import Page404 from "../views/Page404";
 
 export default [
   {
-    path: "/",
+    path: "/mykees-prime-game",
     name: "LandingPage",
     component: LandingPage,
     exact: true,
   },
   {
-    path: "/game",
+    path: "/mykees-prime-game/game",
     name: "GamePage",
     component: GamePage,
     exact: true,
   },
   {
-    path: "/game-over",
+    path: "/mykees-prime-game/game-over",
     name: "GameOverPage",
     component: GameOverPage,
     exact: true,

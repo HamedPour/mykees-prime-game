@@ -33,7 +33,7 @@ function GaveOverPage() {
       <p>{reason}</p>
       <p>You got {score} right!</p>
       <RestartButton>
-        <NavLink to="/game">Start Again</NavLink>
+        <NavLink to="/mykees-prime-game/game">Start Again</NavLink>
       </RestartButton>
     </GameOverPageContainer>
   );
